@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+        <div class="d-flex flex-wrap py-5 my-5">
+            <% if(locals.blogs){%>
+                <ul>
+                    <% blogs.forEach((blog,index) => { %>
+                        <li><a href=<%= '/viewBlog/'+ String(index)%>><%= blog.title %></a></li>
+                    <%}); %>
+                </ul>
+            <%} %>
+        </div>
+<%- include('partials/footer') %>

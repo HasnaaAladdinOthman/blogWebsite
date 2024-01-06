@@ -1,0 +1,19 @@
+<%- include('partials/header.ejs') %>
+        <div class="d-flex flex-wrap justify-content-center text-center py-5 my-5">
+            <form action=<%= "/updateBlog/"+ String(id) %> method="POST">
+                <div class="mb-3">
+                    <label for="title" class="form-label lead fw-bold my-3">Title</label>
+                    <input type="text" class="form-control" id="title" name='title' value='<%= title %>' required>
+                </div>
+                <div class="mb-5">
+                    <label for="content" class="form-label lead fw-bold">Content</label>
+                    <textarea class="form-control" id="content" name="content" cols="120" rows="8" required></textarea>
+                </div>
+                <input type="submit" value="Publish Blog"/>
+            </form>
+        </div>
+        <script>
+            console.log(content);
+            document.getElementById("content").value = String(content);
+        </script>
+<%- include('partials/footer.ejs') %>
